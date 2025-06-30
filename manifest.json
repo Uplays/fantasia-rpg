@@ -1,0 +1,16 @@
+{
+  "name": "Mundo de Fantasía RPG",
+  "short_name": "FantasiaRPG",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#eaf6ff",
+  "theme_color": "#3a7ca5",
+  "description": "Mundo de Fantasía RPG: lore, ciudades, inventario, NPCs y mapas interactivos.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48 64x64 96x96 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}

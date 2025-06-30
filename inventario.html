@@ -1,0 +1,195 @@
+<section id="inventario">
+  <h1>Inventario Completo</h1>
+  <!-- En inventario.html, antes de la tabla -->
+  <input type="text" id="buscador-inventario" placeholder="Buscar objeto..." style="margin-bottom:1rem;width:100%;max-width:400px;padding:0.5rem;">
+  <h2>Armas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Arma</th>
+        <th>Precio (monedas de oro)</th>
+        <th>Daño (d20 tirada + modificador)</th>
+        <th>Descripción / Especial</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label-1="Arma">Espada Larga de Eldoria</td>
+        <td data-label-2="Precio (monedas de oro)">1500</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 5</td>
+        <td data-label-4="Descripción / Especial">Espada legendaria, afilada y equilibrada. +2 a la precisión en combate.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Martillo Forjado de Forjagrís</td>
+        <td data-label-2="Precio (monedas de oro)">1200</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 7</td>
+        <td data-label-4="Descripción / Especial">Gran daño por impacto, puede aturdir al enemigo con 15+ en tirada de daño.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Arco Élfico de los Bosques</td>
+        <td data-label-2="Precio (monedas de oro)">1800</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 4</td>
+        <td data-label-4="Descripción / Especial">Permite disparar a larga distancia sin penalización.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Daga Envenenada de las Sombras</td>
+        <td data-label-2="Precio (monedas de oro)">900</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 3 + veneno (1d6)</td>
+        <td data-label-4="Descripción / Especial">Daño base más daño de veneno que puede paralizar (tirada de salvación DC 12).</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Lanza de Fuego de Sirath</td>
+        <td data-label-2="Precio (monedas de oro)">2200</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 6 + 1d8 fuego</td>
+        <td data-label-4="Descripción / Especial">Inflige daño de fuego adicional y puede prender fuego a objetos inflamables.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Ballesta de Precisión Real</td>
+        <td data-label-2="Precio (monedas de oro)">2000</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 5</td>
+        <td data-label-4="Descripción / Especial">Disparo preciso con +3 a la tirada de ataque.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Maza del Trueno</td>
+        <td data-label-2="Precio (monedas de oro)">2500</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 8</td>
+        <td data-label-4="Descripción / Especial">Daño elevado y chance de aturdir enemigos al golpear (18+).</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Espada Rúnica de Lysandra</td>
+        <td data-label-2="Precio (monedas de oro)">3000</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 7 + 1d10 mágico</td>
+        <td data-label-4="Descripción / Especial">Daño mágico que ignora armadura física.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Hacha de Guerra de Drak'Tul</td>
+        <td data-label-2="Precio (monedas de oro)">2100</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 6</td>
+        <td data-label-4="Descripción / Especial">Puede cortar escudos y tiene +2 contra enemigos con armadura.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Arma">Báculo de Cristal Arcano</td>
+        <td data-label-2="Precio (monedas de oro)">3200</td>
+        <td data-label-3="Daño (d20 tirada + modificador)">1d20 + 4 + 2d6 mágico</td>
+        <td data-label-4="Descripción / Especial">Permite lanzar conjuros de rayo y escudo arcano.</td>
+      </tr>
+      <!-- ...añade decenas de armas más siguiendo este formato... -->
+    </tbody>
+  </table>
+  <h2>Objetos Mágicos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Objeto</th>
+        <th>Precio (monedas de oro)</th>
+        <th>Descripción y Efectos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label-1="Objeto">Amuleto de Althar</td>
+        <td data-label-2="Precio (monedas de oro)">2500</td>
+        <td data-label-3="Descripción y Efectos">Incrementa la resistencia mágica del portador en +5. Protección contra hechizos de nivel bajo.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Objeto">Pergamino de Hechizos de Lysandra</td>
+        <td data-label-2="Precio (monedas de oro)">1800</td>
+        <td data-label-3="Descripción y Efectos">Permite lanzar un hechizo a elección (bola de fuego, escudo mágico, o curación menor). Uso único.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Objeto">Piedra de Regeneración de Drak'Tul</td>
+        <td data-label-2="Precio (monedas de oro)">2200</td>
+        <td data-label-3="Descripción y Efectos">Cura 50 puntos de vida instantáneamente. Se recarga con la luz del sol.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Objeto">Capa de Invisibilidad</td>
+        <td data-label-2="Precio (monedas de oro)">5000</td>
+        <td data-label-3="Descripción y Efectos">Otorga invisibilidad por hasta 10 minutos o hasta que el usuario ataque o lance un hechizo.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Objeto">Anillo de Teletransporte</td>
+        <td data-label-2="Precio (monedas de oro)">6000</td>
+        <td data-label-3="Descripción y Efectos">Permite teletransportarse hasta 30 metros a voluntad, 3 veces al día.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Objeto">Guantes de Fuerza Titánica</td>
+        <td data-label-2="Precio (monedas de oro)">4000</td>
+        <td data-label-3="Descripción y Efectos">Duplica la fuerza física del portador durante 5 minutos.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Objeto">Bastón de Control de Elementos</td>
+        <td data-label-2="Precio (monedas de oro)">7000</td>
+        <td data-label-3="Descripción y Efectos">Permite controlar fuego, agua, tierra y aire con hechizos básicos. 10 cargas diarias.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Objeto">Espejo de Visión Remota</td>
+        <td data-label-2="Precio (monedas de oro)">3500</td>
+        <td data-label-3="Descripción y Efectos">Permite ver un lugar remoto como si estuvieras allí, hasta 1 km de distancia.</td>
+      </tr>
+      <!-- ...añade decenas de objetos mágicos más siguiendo este formato... -->
+    </tbody>
+  </table>
+  <h2>Recursos y Usos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+        <th>Usos posibles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label-1="Recurso">Minerales de Montañas de Hierro</td>
+        <td data-label-2="Descripción">Metal resistente extraído de las montañas.</td>
+        <td data-label-3="Usos posibles">Forjar armas, armaduras y herramientas robustas.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Hierbas del Bosque Eterno</td>
+        <td data-label-2="Descripción">Plantas medicinales con propiedades curativas.</td>
+        <td data-label-3="Usos posibles">Crear pociones de curación y antídotos para venenos.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Pieles de Lobos Sombríos</td>
+        <td data-label-2="Descripción">Piel gruesa y resistente, oscura.</td>
+        <td data-label-3="Usos posibles">Fabricar armaduras ligeras y capas de camuflaje para sigilo.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Cristales de Energía Arcana</td>
+        <td data-label-2="Descripción">Cristales que almacenan energía mágica.</td>
+        <td data-label-3="Usos posibles">Usar en la fabricación de objetos mágicos o recargar artefactos.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Polvo de Huesos de Dragón</td>
+        <td data-label-2="Descripción">Polvo molido de huesos de dragón.</td>
+        <td data-label-3="Usos posibles">Ingrediente para poderosos hechizos y pociones de resistencia al fuego.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Madera de Árboles Milenarios</td>
+        <td data-label-2="Descripción">Madera dura y flexible de árboles centenarios.</td>
+        <td data-label-3="Usos posibles">Construcción de arcos, bastones y estructuras mágicas.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Aceite de Loto Nocturno</td>
+        <td data-label-2="Descripción">Aceite extraído de flores que solo florecen de noche.</td>
+        <td data-label-3="Usos posibles">Mejora la visión nocturna y se usa en ungüentos para sigilo.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Escamas de Serpiente Marina</td>
+        <td data-label-2="Descripción">Escamas brillantes con propiedades acuáticas.</td>
+        <td data-label-3="Usos posibles">Crear armaduras resistentes al agua y pociones de respiración submarina.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Cuerda de Seda de Araña Gigante</td>
+        <td data-label-2="Descripción">Cuerda fina pero muy resistente.</td>
+        <td data-label-3="Usos posibles">Usada para trampas, escalada y confección de prendas resistentes y ligeras.</td>
+      </tr>
+      <tr>
+        <td data-label-1="Recurso">Gemas de Luz Lunar</td>
+        <td data-label-2="Descripción">Gemas que brillan con la luz de la luna.</td>
+        <td data-label-3="Usos posibles">Encantamientos y fabricación de amuletos mágicos.</td>
+      </tr>
+      <!-- ...añade decenas de recursos más siguiendo este formato... -->
+    </tbody>
+  </table>
+</section>

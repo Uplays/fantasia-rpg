@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="description" content="Mundo de Fantasía RPG: lore, ciudades, inventario, NPCs y mapas interactivos.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mundo de Fantasía - RPG</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="manifest" href="manifest.json">
+  <style>
+    nav {
+      background: #3a7ca5;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(58,124,165,0.08);
+      display: flex;
+      justify-content: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+    }
+    nav li {
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      display: block;
+    }
+    nav a:hover, nav a.active {
+      background: #22577a;
+      color: #ffd166;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="#" data-seccion="lore-dinamico" class="active">Lore</a></li>
+    <li><a href="#" data-seccion="ciudades-dinamicas">Ciudades</a></li>
+    <li><a href="#" data-seccion="inventario-dinamico">Inventario</a></li>
+    <li><a href="#" data-seccion="npcs-dinamicos">NPCs</a></li>
+    <li><a href="#" data-seccion="mapa-dinamico">Mapa</a></li>
+  </ul>
+</nav>
+<main>
+  <section id="lore-dinamico"></section>
+  <section id="ciudades-dinamicas" style="display:none"></section>
+  <section id="inventario-dinamico" style="display:none"></section>
+  <section id="npcs-dinamicos" style="display:none"></section>
+  <section id="mapa-dinamico" style="display:none"></section>
+</main>
+<script>
+function cargarSeccion(id, archivo) {
+  const seccion = document.getElementById(id);
+  seccion.innerHTML = '<div class="loader">Cargando...</div>';
+  seccion.classList.remove('show');
+  seccion.classList.add('fade');
+  fetch(archivo)
+    .then(r => {
+      if (!r.ok) throw new Error(`No se pudo cargar ${archivo}`);
+      return r.text();
+    })
+    .then(html => {
+      seccion.innerHTML = html;
+      setTimeout(() => {
+        seccion.classList.add('show');
+      }, 50);
+    })
+    .catch(err => {
+      seccion.innerHTML = `<p style="color:red;">Error: ${err.message}</p>`;
+      console.error(err);
+    });
+}
+
+// Carga inicial
+cargarSeccion('lore-dinamico', 'lore.html');
+cargarSeccion('ciudades-dinamicas', 'ciudades.html');
+cargarSeccion('inventario-dinamico', 'inventario.html');
+cargarSeccion('npcs-dinamicos', 'npcs-eldoria.html');
+cargarSeccion('mapa-dinamico', 'mapa.html');
+
+// Menú de navegación SPA
+const secciones = [
+  'lore-dinamico',
+  'ciudades-dinamicas',
+  'inventario-dinamico',
+  'npcs-dinamicos',
+  'mapa-dinamico'
+];
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    // Mostrar solo la sección elegida
+    secciones.forEach(id => {
+      document.getElementById(id).style.display = (link.dataset.seccion === id) ? '' : 'none';
+    });
+    // Marcar activo en el menú
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    link.classList.add('active');
+    // Si es la sección de NPCs, puedes cargar otros NPCs aquí si lo deseas
+  });
+});
+</script>
+<script src="scripts/main.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(reg => console.log('Service Worker registrado', reg))
+    .catch(err => console.error('Error al registrar Service Worker', err));
+}
+</script>
+</body>
+</html>

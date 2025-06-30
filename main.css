@@ -1,0 +1,194 @@
+/* Reset básico */
+/* Estilos generales para la sección inventario */
+#inventario {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+#inventario h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #b38600;
+  text-shadow: 1px 1px 2px #5c3d00;
+}
+
+#inventario h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #b38600;
+  padding-bottom: 0.3rem;
+  color: #8c6e00;
+}
+
+#inventario table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(179, 134, 0, 0.2);
+  background: #fffef7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#inventario th {
+  background-color: #b38600;
+  color: #fff;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-bottom: 3px solid #8c6e00;
+}
+
+#inventario td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e5d88e;
+  vertical-align: middle;
+  font-size: 1rem;
+  color: #4a4300;
+}
+
+#inventario tbody tr:nth-child(even) {
+  background-color: #fffdf2;
+}
+
+#inventario tbody tr:hover {
+  background-color: #f4ecc5;
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  #inventario table, 
+  #inventario thead, 
+  #inventario tbody, 
+  #inventario th, 
+  #inventario td, 
+  #inventario tr {
+    display: block;
+  }
+  
+  #inventario thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  #inventario tr {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #b38600;
+  }
+  
+  #inventario td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  #inventario td:before {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #b38600;
+  }
+  
+  #inventario td:nth-of-type(1):before { content: attr(data-label-1); }
+  #inventario td:nth-of-type(2):before { content: attr(data-label-2); }
+  #inventario td:nth-of-type(3):before { content: attr(data-label-3); }
+  #inventario td:nth-of-type(4):before { content: attr(data-label-4); }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #ffffff;
+  color: #111;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1, h2, h3, h4 {
+  color: #3a7ca5;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid #a3c1d1;
+  padding-bottom: 0.3rem;
+}
+p, ul {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+ul {
+  padding-left: 1.3rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+strong {
+  color: #34699a;
+}
+.enemy {
+  background: #e6f0fa;
+  border-left: 5px solid #3a7ca5;
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(58,124,165,0.15);
+}
+.enemy-name {
+  font-weight: 700;
+  color: #2c5d82;
+}
+.enemy-life {
+  font-style: italic;
+  color: #5a7d99;
+}
+a {
+  color: #3a7ca5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #1e497f;
+  text-decoration: underline;
+}
+pre {
+  background: #f0f7ff;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #2c5d82;
+  border: 1px solid #a3c1d1;
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.fade.show {
+  opacity: 1;
+}
+.loader {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #3a7ca5;
+}
