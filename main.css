@@ -193,85 +193,69 @@ pre {
   color: #3a7ca5;
 }
 
-/* ---- Mejoras específicas para móviles pequeños (como iPhone 12 mini) ---- */
-@media (max-width: 400px) {
+/* --- AJUSTES PARA MÓVIL --- */
+@media (max-width: 480px) {
   body {
-    padding: 0.5rem 0.2rem;
-    font-size: 0.93rem;
+    padding: 1rem 0.5rem;
     max-width: 100vw;
+    font-size: 0.97rem;
+  }
+  h1, h2, h3, h4 {
+    font-size: 1.2rem !important;
+    margin-top: 1.3rem;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.15rem;
   }
   #inventario {
-    padding: 0 0.1rem;
     max-width: 100vw;
+    margin: 1rem 0;
+    padding: 0 0.3rem;
+    font-size: 0.95rem;
   }
   #inventario h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   #inventario h2 {
-    font-size: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.1rem;
-  }
-  #inventario table {
-    font-size: 0.9rem;
-    width: 100%;
-    min-width: unset;
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
   }
   #inventario td, #inventario th {
     padding: 8px 7px;
-    font-size: 0.93rem;
+    font-size: 0.88rem;
   }
-  #inventario tr {
-    margin-bottom: 1rem;
+  .enemy {
+    padding: 0.7rem 0.7rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
   }
-  .enemy, pre {
-    padding: 0.5rem 0.2rem;
-    font-size: 0.93rem;
+  pre {
+    padding: 0.7rem;
+    font-size: 0.78rem;
   }
-  h1, h2, h3, h4 {
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.1rem;
+  .loader {
+    font-size: 1rem;
+    padding: 1rem;
   }
-  ul, p {
-    font-size: 0.93rem;
-    margin-bottom: 0.8rem;
-  }
-  a {
-    word-break: break-all;
+  p, ul, li {
+    font-size: 0.95rem;
   }
 }
 
-/* Ajustes generales para móviles */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   body {
-    padding: 1rem 0.3rem;
-    max-width: 100vw;
+    padding: 0.5rem 0.1rem;
+    font-size: 0.91rem;
   }
-  #inventario {
-    padding: 0 0.1rem;
-    max-width: 100vw;
+  #inventario h1 {
+    font-size: 1.1rem;
   }
-  #inventario table {
-    width: 100%;
-    font-size: 0.97rem;
-    overflow-x: auto;
-    display: block;
+  #inventario h2 {
+    font-size: 1rem;
   }
-  #inventario td,
-  #inventario th {
-    word-break: break-word;
+  #inventario td, #inventario th {
+    font-size: 0.75rem;
+    padding: 6px 4px;
   }
-  .enemy, pre {
-    padding: 0.7rem 0.5rem;
-    font-size: 0.97rem;
-  }
-  h1, h2, h3, h4 {
-    font-size: 1.3rem;
-  }
-}  font-size: 1.5rem;
-  color: #3a7ca5;
 }
