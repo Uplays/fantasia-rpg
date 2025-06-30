@@ -192,3 +192,86 @@ pre {
   font-size: 1.5rem;
   color: #3a7ca5;
 }
+
+/* ---- Mejoras específicas para móviles pequeños (como iPhone 12 mini) ---- */
+@media (max-width: 400px) {
+  body {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.93rem;
+    max-width: 100vw;
+  }
+  #inventario {
+    padding: 0 0.1rem;
+    max-width: 100vw;
+  }
+  #inventario h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  #inventario h2 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.1rem;
+  }
+  #inventario table {
+    font-size: 0.9rem;
+    width: 100%;
+    min-width: unset;
+  }
+  #inventario td, #inventario th {
+    padding: 8px 7px;
+    font-size: 0.93rem;
+  }
+  #inventario tr {
+    margin-bottom: 1rem;
+  }
+  .enemy, pre {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.93rem;
+  }
+  h1, h2, h3, h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.1rem;
+  }
+  ul, p {
+    font-size: 0.93rem;
+    margin-bottom: 0.8rem;
+  }
+  a {
+    word-break: break-all;
+  }
+}
+
+/* Ajustes generales para móviles */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0.3rem;
+    max-width: 100vw;
+  }
+  #inventario {
+    padding: 0 0.1rem;
+    max-width: 100vw;
+  }
+  #inventario table {
+    width: 100%;
+    font-size: 0.97rem;
+    overflow-x: auto;
+    display: block;
+  }
+  #inventario td,
+  #inventario th {
+    word-break: break-word;
+  }
+  .enemy, pre {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.97rem;
+  }
+  h1, h2, h3, h4 {
+    font-size: 1.3rem;
+  }
+}  font-size: 1.5rem;
+  color: #3a7ca5;
+}
